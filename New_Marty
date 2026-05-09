@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Marty's Homepage</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fb;
+            color: #333;
+        }
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto 40px;
+            padding: 0 15px;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            border-radius: 8px;
+        }
+        .section {
+            padding: 20px 20px 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 20px;
+            border-left: 4px solid #007bff;
+            padding-left: 8px;
+        }
+        h3 {
+            font-size: 17px;
+            margin-top: 15px;
+        }
+        .intro {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+        .intro-text {
+            flex: 1 1 250px;
+        }
+        .intro img {
+            max-width: 220px;
+            border-radius: 6px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .download-list li {
+            margin-bottom: 4px;
+        }
+        .tagline {
+            font-style: italic;
+            color: #555;
+            margin-top: 8px;
+        }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            margin: 15px 0 25px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px auto 20px;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            header h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ようこそ、Marty のホームページへ！</h1>
+    <p>Marty's Homepage – ハイキング・草テニス・草数学・PCセキュリティ</p>
+</header>
+
+<div class="container">
+
+    <!-- 自己紹介セクション -->
+    <section class="section">
+        <div class="intro">
+            <div class="intro-text">
+                <p>趣味は、ハイキング、草テニスと草数学です。</p>
+                <p class="tagline">
+                    “Live as if you were to die tomorrow. Learn as if you were to live forever.”
+                </p>
+                <p>
+                    Facebook：
+                    <a href="https://www.facebook.com/munehiro.shinabe.3" target="_blank" rel="noopener">
+                        munehiro.shinabe.3
+                    </a>
+                </p>
+                <p>ここでは、私の作成した Mathematica ノートや資料、写真などを紹介します。</p>
+            </div>
+            <div>
+                <img src="タイ卜vcdxルなし.jpg" alt="Marty の写真">
+            </div>
+        </div>
+    </section>
+
+    <!-- [1] テンソルの歴史 -->
+    <section class="section" id="tensor-history">
+        <h2>[1] 約 200 年前に発明された、テンソルの歴史</h2>
+        <p>
+            工学で使われている数学は、主に 18〜19 世紀に発明されたものばかりですね！！
+        </p>
+        <p>
+            <img src="テンソルの歴史２.jpg" alt="テンソルの歴史 図2" style="max-width:48%;margin-right:2%;">
+            <img src="テンソルの歴史.jpg" alt="テンソルの歴史 図1" style="max-width:48%;">
+        </p>
+    </section>
+
+    <!-- [2] Mathematica を用いたテンソルの自主演習 -->
+    <section class="section" id="tensor-mathematica">
+        <h2>[2] Mathematica を用いたテンソルの自主学習</h2>
+
+        <h3>なぜ数式処理ソフトを使うのか</h3>
+        <p>以下のような理由から、数式処理ソフトを活用しています：</p>
+        <ul>
+            <li>数学の本を読むだけでは「もちんぷんかんぷん」で、手を動かさないと理解が進まない。</li>
+            <li>細かい計算や式変形はソフトに任せ、本質的な流れに集中できる。</li>
+            <li>非線形方程式など、解析的に解けない問題も数値解で試せる。</li>
+            <li>記号が多く、後から手書きノートを見ても識別できないことがある。</li>
+        </ul>
+
+        <h3>自作パッケージ “msh_tensorial”</h3>
+        <p>
+            「msh_tensorial.wl」は Mathematica 上でテンソル計算を行うための自作パッケージです。
+            ダウンロードして読み込んでから使用してください。
+        </p>
+        <ul class="download-list">
+            <li>
+                <a href="msh_tensorial.wl" download>
+                    「msh_tensorial.wl」をダウンロード
+                </a>
+            </li>
+            <li>
+                <a href="msh_tensorial20251031.nb" download>
+                    「msh_tensorial20251031.nb」使用例ノートをダウンロード
+                </a>
+            </li>
+        </ul>
+
+        <h3>「リーマン幾何学と相対性理論」を用いた自主学習</h3>
+        <p>
+            著者：岡部洋一（東京大学／放送大学 名誉教授）<br>
+            外部サイトの PDF も参考にしています：
+            <a href="https://www.moge.org/okabe/temp/Riemann.pdf" target="_blank" rel="noopener">
+                Riemann.pdf をダウンロード
+            </a>
+        </p>
+
+        <h3>Mathematica ノート・PDF ダウンロード</h3>
+        <ul class="download-list">
+            <li><a href="https://raw.githubusercontent.com/Parts-Marty/Parts-Marty.github.io/main/Math第2章.自然基底_反変ベクトルと共変ベクトル.nb" download>Math第2章 自然基底_反変ベクトルと共変ベクトル.nb</a></li>
+            <li><a href="https://raw.githubusercontent.com/Parts-Marty/Parts-Marty.github.io/main/Math第2章.自然基底_反変ベクトルと共変ベクトル.pdf" download>Math第2章 自然基底_反変ベクトルと共変ベクトル.pdf</a></li>
+            <li><a href="https://raw.githubusercontent.com/Parts-Marty/Parts-Marty.github.io/main/Math第3章.双対座標系.nb" download>Math第3章 双対座標系.nb</a></li>
+            <li><a href="https://raw.githubusercontent.com/Parts-Marty/Parts-Marty.github.io/main/Math第3章.双対座標系.pdf" download>Math第3章 双対座標系.pdf</a></li>
+            <li><a href="https://raw.githubusercontent.com/Parts-Marty/Parts-Marty.github.io/main/Math第4章.特殊相対性理論.nb" download>Math第4章 特殊相対性理論.nb</a></li>
+            <li><a href="https://raw.githubusercontent.com/Parts-Marty/Parts-Marty.github.io/main/Math第5章.共変微分.nb" download>Math第5章 共変微分.nb</a></li>
+            <li><a href="https://raw.githubusercontent.com/Parts-Marty/Parts-Marty.github.io/main/Math第6章.曲率.nb" download>Math第6章 曲率.nb</a></li>
+            <li><a href="https://raw.githubusercontent.com/Parts-Marty/Parts-Marty.github.io/main/Math第7章.一般相対性理論.nb" download>Math第7章 一般相対性理論.nb</a></li>
+            <li><a href="https://raw.githubusercontent.com/Parts-Marty/Parts-Marty.github.io/main/Math付録A空間微分演算子.nb" download>Math付録A 空間微分演算子.nb</a></li>
+            <li><a href="https://raw.githubusercontent.com/Parts-Marty/Parts-Marty.github.io/main/Math付録B電磁気学の相対性理論.nb" download>Math付録B 電磁気学の相対性理論.nb</a></li>
+        </ul>
+
+        <h3>その他の教科書を用いた自主学習</h3>
+        <ul class="download-list">
+            <li>「デイヴィッドC.ケイ テンソル解析」用 ZIP（準備中）</li>
+            <li>「田代嘉宏 テンソル解析 基礎数学選書23」用 ZIP（準備中）</li>
+        </ul>
+    </section>
+
+    <!-- [3] PC セキュリティ -->
+    <section class="section" id="pc-security">
+        <h2>[3] PC のセキュリティについて</h2>
+        <p>
+            パスキー認証が少しずつ必須になってきたことから、PC のセキュリティシステムに
+            強い関心を持つようになりました。調べていくうちに、現代の CPU には
+            「セキュリティ専用プロセッサ」と専用の ROM / NVRAM が存在することを知り、
+            その仕組みを追いかけています。
+        </p>
+        <p>
+            <img src="スライイ1.JPG" alt="セキュリティスライド1" style="max-width:32%;margin-right:1%;">
+            <img src="スライイ2.JPG" alt="セキュリティスライド2" style="max-width:32%;margin-right:1%;">
+            <img src="スライイ3.JPG" alt="セキュリティスライド3" style="max-width:32%;">
+        </p>
+        <p>
+            ウイルスが「偽の証明書」を登録しようとした場合に何が起こるか、  
+            そのとき PC はどのように信頼を判断するのか――そういったテーマをスライドにまとめています。
+        </p>
+        <p>
+            <img src="スライイ3p5.Jpg" alt="セキュリティスライド3.5" style="max-width:32%;margin-right:1%;">
+            <img src="スライイ4.JPG" alt="セキュリティスライド4" style="max-width:32%;margin-right:1%;">
+            <img src="スライイ5.JPG" alt="セキュリティスライド5" style="max-width:32%;"><br>
+            <img src="スライイ6.JPG" alt="セキュリティスライド6" style="max-width:32%;margin-right:1%;">
+            <img src="スライイ7.JPG" alt="セキュリティスライド7" style="max-width:32%;margin-right:1%;">
+            <img src="スライイ8.JPG" alt="セキュリティスライド8" style="max-width:32%;">
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    &copy; Marty – parts-marty.github.io
+</footer>
+
+</body>
+</html>
